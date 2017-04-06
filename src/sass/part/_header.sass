@@ -1,0 +1,192 @@
+.header
+	position: relative
+	width: 100%
+	padding: 27px 0 28px
+	background-color: $base-bg
+	text-align: center
+	transition: padding .24s linear
+	&.is-fixed
+		position: fixed
+		z-index: 9999
+		padding: 15px 0
+		top: 0
+		.header
+			&__info
+				.social-icon
+					opacity: 0
+	.logo
+		float: left
+		display: inline-block
+		+r(768)
+			float: none
+	&__info
+		float: right
+		text-align: right
+		opacity: 1
+		+r(480)
+			display: none
+		.social-icon
+			transition: opacity .25s ease-in-out
+			opacity: 1
+			+r(568)
+				display: none
+		.is-phone
+			margin-bottom: 10px
+			a
+				color: $gray-text
+				+font-family($helvetica-bold)
+	&__nav
+		display: inline-block
+		vertical-align: top
+		margin-top: 35px
+		+r(768)
+			margin-top: 0
+		.box
+			&__section
+				display: none
+				&.is-active
+					display: block
+
+	.search
+		margin: 10px auto 15px
+		position: relative
+		height: 30px
+		input
+			border: none
+			outline: none
+			height: 23px
+			border: 1px solid transparent
+			will-change: transition, padding
+			transition: all .25s ease-in-out
+			padding: 0 0 0 5px
+			&:focus
+				border-bottom-color: $main-color
+				height: 30px
+		.btn-search
+			transform: translateY(-50%)
+			position: absolute
+			padding: 0
+			right: 6px
+			top: 35%
+// navigation
+.menu
+	font-size: 0
+	transition: all .30s ease-in-out
+	will-change: transform, transition
+	+r(768)
+		transform: translateX(-200%)
+		overflow: hidden
+		position: fixed
+		z-index: 9998
+		opacity: 0
+		height: 100%
+		top: 0
+		left: 0
+		width: 200px
+		padding: 20px 0
+		background-color: darken($base-bg, 10)
+	+r(640)
+		width: 120px
+		text-align: left
+	&__item
+		display: inline-block
+		padding: 0 10px
+		+r(768)
+			display: block
+			margin-bottom: 10px
+	&__link
+		color: $gray-text
+		border-bottom: 3px solid transparent
+		+r(768)
+			color: $black
+			display: block
+			padding-bottom: 5px
+		&.is-active,
+		&:hover
+			border-bottom-color: $main-color
+	&-wrapper
+		text-align: left
+		max-width: 58%
+		display: inline-block
+		vertical-align: top
+		width: 100%
+	&-container
+		width: 100%
+		display: inline-block
+		vertical-align: top
+		max-width: 20%
+		text-align: left
+		+r(768)
+			margin-top: 10px
+	&-container,
+	&-wrapper
+		padding-right: 10px
+		+r(768)
+			max-width: 100%
+			padding-right: 0
+
+.box__section
+	display: none
+	font-size: 16px
+	&.is-active
+		display: block
+// js menu
+.box
+	border-bottom: 1px solid $main-color
+	background-color: $white
+	padding: 15px 0 30px
+	position: absolute
+	z-index: 9999
+	display: none
+	top: 100%
+	width: 100%
+	left: 0
+	+r(768)
+		left: 200px
+		width: 250px
+		height: 100vh
+		transform: translatex(-100%)
+		top: 0
+	+r(640)
+		width: 150px
+	&.is-open
+		display: block
+		+r(768)
+			transform: translateX(0)
+			overflow-y: auto
+		+r(640)
+			transform: translateX(-80px)
+	a
+		color: $gray-text
+		font-size: 16px
+		padding-bottom: 7px
+		display: inline-block
+		width: 100%
+		margin-bottom: 7px
+		border-bottom: 2px solid rgba($gray-text, .20)
+		&.title
+			&-hide
+				display: none
+				+r(768)
+					display: block
+		+r(768)
+			font-size: 14px
+		+r(640)
+			font-size: 12px
+		+r(320)
+			font-size: 10px
+	ul
+		font-size: 0
+		+r(768)
+			display: none
+		li
+			font-size: 12px
+			a
+				font-size: 12px
+				color: $gray-text
+				margin-bottom: 5px
+				display: block
+				border: none
+				&:hover
+					color: darken($gray-text, 20)
+

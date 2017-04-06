@@ -1,0 +1,85 @@
+---
+title: Контакты
+parallaxTitle: Только лучшие производители оборудования
+---
+<!doctype html>
+<html>
+{% include "partials/_head.html" %}
+<body>
+	<div class="out">
+		{% include "partials/_header.html" %}
+
+		<!-- breadcrumbs begin -->
+		<div class="breadcrumbs">
+			<div class="inner">
+				<ul>
+					<li>Контакты</li>
+				</ul>
+			</div>
+		</div>
+		<!-- breadcrumbs end -->
+
+		<!-- contacts begin -->
+		<div class="contacts">
+			<div class="inner">
+				<ul class="contacts-list">
+					<li>
+						<i class="fa fa-map-marker"></i>
+						<span>123060, Россия, Москва, ул. Таллинская, дом 13, корп. 4, пом. 2</span>
+					</li>
+					<li class="contacts-phone">
+						<i class="fa fa-phone"></i>
+						<a href="tel:+74992701662">+7 (499) 270-16-62</a>
+					</li>
+					<li>
+						<i class="fa fa-shopping-cart"></i>
+						<span>Отдел продаж: sales@gluvex.com</span>
+					</li>
+					<li>
+						<i class="fa fa-cog"></i>
+						<span>Сервисная служба: support@gluvex.com</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- contacts end -->
+
+		<!-- map begin -->
+		<div class="map">
+			<div class="map-wrapper" id="map"></div>
+		</div>
+		<!-- map begin -->
+
+
+
+
+		{% include "partials/_footer.html" %}
+	</div>
+
+	<!-- google api -->
+	<script type="text/javascript">
+		function initMap() {
+			var map;
+			var myLatLng = {lat: 55.7988782, lng: 37.4002864};
+
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: myLatLng,
+				zoom: 15,
+				disableDefaultUI: true,
+				scrollwheel: false
+			});
+
+			var image = '../img/map-marker.png';
+			var beachMarker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				icon: image
+			});
+		}
+
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw90EP8rd6e_32JVYe-YqWAQYKFmfck78&callback=initMap">
+	</script>
+	<script src="js/app.js"></script>
+</body>
+</html>

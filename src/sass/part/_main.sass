@@ -1,0 +1,664 @@
+// preview
+.preview
+	padding: 15px 0
+	background-color: $base-bg
+
+// news box
+.content-news
+	background-color: $base-bg
+	padding: 15px 0 10px 0
+	+r(768)
+		text-align: left
+	&.news-inner
+		background-color: transparent
+	.preview
+		padding: 0
+		margin-bottom: 20px
+		background-color: transparent
+		h1
+			text-transform: uppercase
+			margin: 0 auto 15px
+	.info__news
+		h2
+			text-align: left
+			font-size: 24px
+			+r(768)
+				font-size: 20px
+			+r(568)
+				font-size: 18px
+		p
+			color: $gray-text
+			max-width: 300px
+			float: right
+			text-align: right
+			+r(768)
+				float: none
+				margin-bottom: 15px
+				text-align: left
+				max-width: 100%
+	h2
+		text-align: center
+		margin: 0 auto 20px
+		display: inline-block
+	.row
+		margin-left: -10px
+		margin-right: -10px
+		+r(768)
+			margin-left: -5px
+			margin-right: -5px
+	.col
+		text-align: left
+		&-wrapper
+			background-color: $white
+			padding: 0 10px
+			min-height: 315px
+			+r(768)
+				min-height: 300px
+				padding: 0 10px 15px
+			+r(568)
+				min-height: auto
+				text-align: center
+		p
+			margin-top: 13px
+			display: inline-block
+			+r(768)
+				margin-top: 10px
+		img
+			+r(768)
+				display: block
+				margin: 0 auto
+	.data-news
+		margin: 11px auto 20px
+		+font-family($helvetica-reg)
+		+r(768)
+			margin: 10px auto
+	a
+		display: block
+
+// Grid
+.grid
+	font-size: 0
+	.col
+		vertical-align: top
+		&:last-child
+			+r(768)
+				width: 100%
+				.grid__field
+					width: 50%
+					display: inline-block
+					vertical-align: top
+					margin: 0
+					padding: 0 5px
+			+r(568)
+				.grid__field
+					width: 100%
+					padding: 0
+					margin-bottom: 10px
+	&__field
+		font-size: 0
+		overflow: hidden
+		position: relative
+		margin-top: 10px
+		text-align: center
+		.img
+			+cover
+			max-width: 100%
+			height: 233px
+			display: block
+			+r(480)
+				height: 150px
+		&-center
+			+r(568)
+				height: 230px
+			.img
+				height: 476px
+		p
+			font-size: 20px
+			+font-family($helvetica-bold)
+			position: absolute
+			cursor: pointer
+			padding: 0 15px
+			will-change: transform, opacity
+			transition: transform .45s ease, opacity .44s linear
+			top: 50%
+			left: 50%
+			opacity: 0
+			transform: translate(-50%, -20%)
+			color: $white
+			+r(568)
+				opacity: 1
+				transform: translate(-50%, -50%)
+		&:hover
+			p
+				transform: translate(-50%, -50%)
+				opacity: 1
+		&:first-child
+			margin-top: 0
+
+// Social & Icons
+.social-icon
+	font-size: 0
+	li
+		display: inline-block
+		margin: 0 2px
+		a
+			display: block
+		i
+			color: $main-color
+			width: 25px
+			height: 25px
+			font-size: 14px
+			border: 1px solid $main-color
+			border-radius: 50%
+			position: relative
+			&:before
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+// breadcrumbs
+.breadcrumbs
+	padding: 15px 0 4px
+	+r(940)
+		display: none
+	ul
+		font-size: 0
+		li,
+		a
+			display: inline-block
+			color: #939392
+			font-size: 16px
+		li
+			padding-left: 10px
+			margin-right: 4px
+			position: relative
+			margin-bottom: 10px
+			a
+				display: block
+				cursor: pointer
+				&:hover
+					text-decoration: underline
+			&.active
+				cursor: default
+				color: $main-color
+			&:first-child
+				padding-left: 0
+				&:before
+					display: none
+			&:before
+				position: absolute
+				content: '/'
+				left: 0
+				top: 0
+
+// parallax
+.parallax
+	display: block
+	min-height: 313px
+	padding-top: 35px
+	+cover
+	+r(768)
+		min-height: 210px
+		padding-top: 15px
+	+r(568)
+		min-height: 180px
+	+r(380)
+		min-height: 140px
+	p
+		color: $white
+		font-size: 24px
+		margin-bottom: 15px
+		line-height: 28px
+		+r(768)
+			font-size: 18px
+			line-height: 22px
+		+r(568)
+			font-size: 14px
+			line-height: 16px
+	h1,
+	p
+		letter-spacing: -0.5px
+		color: $white
+	&-analytic
+		p
+			font-size: 20px
+			line-height: normal
+			+r(768)
+				font-size: 16px
+			+r(568)
+				font-size: 14px
+
+// about-text
+.about-text
+	padding-top: 25px
+	+r(768)
+		padding-top: 15px
+	p
+		font-size: 16px
+		padding-bottom: 25px
+		&:last-child
+			border-bottom: 1px solid #4da08f
+		+r(768)
+			font-size: 14px
+			padding-bottom: 15px
+			line-height: 16px
+
+// main-news
+.main-news
+	padding: 15px 0 0
+	background-color: $white
+	.col-wrapper
+		min-height: 290px
+		padding: 15px 10px
+		+r(568)
+			min-height: auto
+			padding: 10px 5px
+		a
+			display: block
+			+cover
+			height: 197px
+			+r(568)
+				background-size: auto
+	.col
+		p
+			margin: 10px 0 0
+	.data-news
+		+font-family($helvetica-bold)
+		margin: 10px 0 0
+
+// pagination
+.pagination
+	ul
+		font-size: 0
+		text-align: center
+		padding: 15px 0 33px
+		margin-left: -10px
+		margin-right: -10px
+		+r(960)
+			margin-right: 0
+			margin-left: 0
+		li
+			display: inline-block
+			margin: 0 2px
+			transition: background-color .24s linear
+			&.active
+				a
+					background-color: #4d9584
+			&:hover
+				a
+					background-color: #4d9584
+			a
+				display: block
+				width: 15px
+				background-color: #a9ccc5
+				height: 15px
+				border-radius: 50%
+				color: $white
+				line-height: 15px
+				font-size: 11px
+				text-align: center
+				+font-family($helvetica-bold)
+
+// contacts
+.contacts
+	.contacts-list
+		padding: 50px 0
+		+r(768)
+			padding: 15px 0
+		li
+			display: block
+			margin-bottom: 4px
+			+r(768)
+				margin-bottom: 10px
+			+r(520)
+				text-align: center
+			&.contacts-phone
+				margin: 26px 0
+				+r(768)
+					margin: 0 0 10px
+			i,span,a
+				display: inline-block
+			span,
+			a,
+			i
+				font-size: 24px
+				+r(768)
+					font-size: 20px
+				+r(568)
+					font-size: 16px
+				+r(520)
+					display: block
+			i
+				margin-right: 14px
+				color: $main-color
+				&.fa-phone,
+				&.fa-map-marker
+					margin-left: 3px
+				+r(520)
+					margin: 0 0 5px 0
+
+// service
+.services
+	padding: 20px 0
+	+r(768)
+		padding: 15px 0
+	.services-list
+		padding: 0px 0 230px
+		+r(768)
+			padding: 0
+		li
+			display: block
+			a
+				font-size: 16px
+				line-height: 30px
+				&:hover
+					color: $main-color
+
+// services-lizing
+.services-lizing
+	h5
+		font-size: 16px
+		+font-family($helvetica-bold)
+		margin-bottom: 3px
+		+r(768)
+			margin-bottom: 15px
+	p
+		font-size: 16px
+		line-height: 18px
+		margin-bottom: 22px
+		+r(768)
+			margin-bottom: 15px
+		+r(768)
+			font-size: 14px
+			line-height: 16px
+	.lizing-list
+		padding: 0 0 8px
+		&.list-change
+			li
+				padding-left: 0
+				&:before
+					display: none
+		+r(768)
+			padding: 5px 0 0
+		li
+			display: block
+			font-size: 16px
+			margin-bottom: 22px
+			position: relative
+			+r(768)
+				margin-bottom: 13px
+				font-size: 14px
+				line-height: 16px
+			&:before
+				content: "-"
+				margin-right: 10px
+
+// services-metr
+.services-metr
+	h5
+		margin-bottom: 20px
+		+r(768)
+			margin-bottom: 15px
+
+// .services-sh
+.services-sh
+	padding-bottom: 30px
+	+r(768)
+		padding: 0 0 15px
+	h5
+		margin-bottom: 20px
+		+r(768)
+			margin-bottom: 15px
+	.sh-list
+		list-style: disc outside
+		padding-bottom: 10px
+		padding-left: 15px
+		+r(768)
+			padding-bottom: 0
+		li
+			margin-bottom: 20px
+			font-size: 16px
+			line-height: 18px
+			+r(768)
+				margin-bottom: 15px
+				font-size: 14px
+				line-height: 16px
+
+// brands
+.brands
+	padding: 25px 0 0
+	+r(768)
+		padding: 15px 0
+	&__block
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+		+r(768)
+			margin-bottom: 15px
+		.row
+			margin-bottom: 25px
+			+r(768)
+				margin-bottom: 15px
+		.col-sm
+			text-align: center
+			vertical-align: middle
+			+gray
+			+r(568)
+				padding: 0 40px
+			+r(320)
+				padding: 0 30px
+			&.active
+				+gray-zero
+		&--title
+			padding-bottom: 15px
+			h6
+				font-size: 16px
+				line-height: 18px
+				color: #999998
+
+// brands-inner
+.brands-inner,
+.consumables
+	padding: 15px 0 0
+	+r(768)
+		padding: 15px 0
+	.brands-logo
+		margin-bottom: 25px
+		+r(768)
+			margin-bottom: 15px
+	p
+		font-size: 12px
+		color: #999998
+		line-height: 14px
+		margin-bottom: 15px
+	.slider-popular
+		text-align: left
+		padding: 15px 0 0
+		+r(768)
+			text-align: center
+		.slider-box
+			margin-bottom: 30px
+			+r(768)
+				margin-bottom: 15px
+		.col
+			span
+				font-size: 14px
+				display: block
+				color: $black
+				+font-family($helvetica-bold)
+				margin-bottom: 6px
+			p
+				color: $black
+
+// complect
+.complect
+	.complect-wrapper
+		font-size: 0
+		min-height: 398px
+		padding: 25px 0
+		+r(768)
+			padding: 15px 0
+			min-height: auto
+	.complect-menu
+		width: 50%
+		display: inline-block
+		vertical-align: top
+		+r(960)
+			width: 100%
+			margin-bottom: 15px
+		.menu-list
+			transition: color .3s ease-in-out
+			a
+				&:hover
+					color: $main-color
+		a
+			font-size: 16px
+			line-height: 30px
+			display: inline-block
+			padding-right: 20px
+			position: relative
+			+r(568)
+				font-size: 14px
+			&.active
+				i
+					transform: rotate(180deg)
+					top: 2px
+			i
+				position: relative
+				right: 0
+				top: 0px
+				transition: all .3s ease-in-out
+		ul
+			display: none
+			padding-left: 35px
+			+r(568)
+				padding-left: 10px
+			li
+				font-size: 16px
+
+// Product-box
+.product
+	&-brand,
+	&-title
+		font-size: 16px
+		+font-family($helvetica-bold)
+		color: $black
+	&-brand
+		margin-bottom: 15px
+	&-title
+		margin-bottom: 19px
+	&-desc
+		font-size: 12px
+		color: $black
+		+font-family($helvetica-reg)
+		margin-bottom: 85px
+		+r(768)
+			margin-bottom: 20px
+	&-country
+		+font-family($helvetica-bold)
+		color: $black
+		font-size: 16px
+		a
+			font-size: inherit
+			+font-family($helvetica-reg)
+			text-decoration: none
+			padding-left: 5px
+	&-content
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin-top: 20px
+		.inner
+			padding-bottom: 20px
+			border-bottom: 1px solid $main-color
+		.tabs
+			&.col-left
+				+r(768)
+					width: 100%
+			&__caption
+				li
+					display: inline-block
+					background-color: $base-bg
+					padding: 9px 15px 6px
+					color: $gray-text
+					font-size: 16px
+					cursor: pointer
+					margin-right: 5px
+					transition: all .29s linear
+					+font-family($helvetica-reg)
+					+r(480)
+						display: block
+						margin-bottom: 10px
+					&:hover
+						background-color: darken($base-bg, 20)
+						color: $black
+					&:last-child
+						margin-right: 0
+					&.active
+						cursor: default
+						color: $black
+						+font-family($helvetica-bold)
+						&:hover
+							background-color: darken($base-bg, 0)
+			&__content
+				display: none
+				padding-top: 20px
+				&.active
+					display: block
+				&--list
+					font-size: 0
+					li
+						padding-bottom: 8px
+						margin-bottom: 10px
+						border-bottom: 1px solid $main-color
+						+clr
+						&:last-child
+							border: none
+							margin-bottom: 0
+						.desc-term,
+						p
+							font-size: 12px
+							color: $black
+							max-width: 50%
+							display: block
+						.desc-term
+							float: left
+							display: block
+							+r(568)
+								float: none
+								padding-bottom: 10px
+								+font-family($helvetica-bold)
+								letter-spacing: 0.01em
+								font-size: 14px
+						p
+							float: right
+							+r(568)
+								float: none
+						& > ul
+							padding-left: 40px
+							border-top: 1px solid $main-color
+							margin-top: 10px
+							display: inline-block
+							+r(768)
+								padding-left: 0
+							li
+								padding-top: 10px
+								margin-bottom: 0
+								&:last-child
+									border: none
+				&--desc
+					font-size: 0
+					li
+						margin-bottom: 20px
+						h2
+							color: $main-color
+							+font-family($helvetica-bold)
+							margin-bottom: 5px
+						p
+							font-size: 12px
+							color: $black
+							+font-family($helvetica-reg)
+							margin-bottom: 18px
+							&:last-child
+								margin-bottom: 0

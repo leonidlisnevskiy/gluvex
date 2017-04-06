@@ -1,0 +1,103 @@
+---
+title: Gluevex - Главная
+parallaxTitle: Технологическое оборудование
+---
+<!doctype html>
+<html>
+{% include "partials/_head.html" %}
+<body>
+	<div class="out">
+		{% include "partials/_header.html" %}
+
+		<!-- breadcrumbs begin -->
+		<div class="breadcrumbs">
+			<div class="inner">
+				<ul>
+					<li><a href="catalog.html">Каталог</a></li>
+					<li class="active">Технологическое оборудование</li>
+				</ul>
+			</div>
+		</div>
+		<!-- breadcrumbs end -->
+
+		<!-- parralax BEGIN -->
+		<div class="parallax parallax-analytic" style="background-image: url('img/parallax-tech.png')" data-rjs="3">
+			<div class="inner">
+				<h1>{{parallaxTitle}}</h1>
+				<p>1. Полный спектр оборудования для производства всех видов лекарственных форм - твердых, жидких, мягких и аэрозолей. <br>2. Автоматизация - от полностью автоматических линий не требующих присутствия оператора так и интеграция единичных приборов в уже готовую линию. <br>3 Обширный опыт поставок у заводов производителей Европейские (преимущественно итальянские) производители с опытом поставок как по всему миру так и на отечественные фармацевтические производства. <br>4. Полное соответствие GMP как в части технического исполнения так и документации. <br>5. Интеграция оборудования разных производителей для стерилизации и транспортировки, инспекционных машин и упаковочных в единое технологическое решение.</p>
+			</div>
+		</div>
+		<!-- parralax END -->
+		<!-- techno begin -->
+		<div class="tech-container">
+			<div class="inner">
+				<ul class="list-bordered">
+					<li>
+						<span>А</span>
+						<ul>
+							<li><a href="#">Автоматические и полуавтоматические линии розлива и укупорки</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>Б</span>
+						<ul>
+							<li><a href="#">Блистерная упаковка</a></li>
+							<li><a href="#">Блоки розлива и укупорки, ручные и полу-автоматические</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>И</span>
+						<ul>
+							<li><a href="#">Инспекционные машины для контроля  протечек  и механических  включений</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>Н</span>
+						<ul>
+							<li><a href="#">Наполнение аэрозольных баллонов</a></li>
+							<li><a href="#">Наполнение тюбиков</a></li>
+							<li>
+								<a href="#" class="js-drop">Насосы
+									<i class="fa fa-chevron-up"></i>
+								</a>
+								<ul>
+									<li><a href="#">Ecoprime</a></li>
+									<li><a href="#">HPLC</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>О</span>
+						<ul>
+							<li><a href="#">Оборудование для  промышленой водоподготовки</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>П</span>
+						<ul>
+							<li><a href="#">Пилотная и промышленная хроматография</a></li>
+							<li><a href="#">Пилотные и промышленные Реактора</a></li>
+							<li><a href="#">Пилотные и промышленные роторные испарители</a></li>
+							<li><a href="#">Производственные рефрактометры</a></li>
+							<li><a href="#">Промышленная микро и ультра фильтрация</a></li>
+							<li><a href="#">Промышленные автоклавы</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>П</span>
+						<ul>
+							<li><a href="#">Укладка на поддоны</a></li>
+							<li><a href="#">Упаковка в картонную тару</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- techno end -->
+
+		{% include "partials/_footer.html" %}
+	</div>
+	<script src="js/app.js"></script>
+</body>
+</html>

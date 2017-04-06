@@ -1,0 +1,72 @@
+.footer
+	&__top
+		padding: 38px 0 31px
+		+r(568)
+			padding: 15px 0
+		.col
+			+r(768)
+				width: 33.3333%
+				text-align: center
+			+r(568)
+				width: 100%
+			h2
+				margin-bottom: 10px
+				+font-family($helvetica-reg)
+			.user-email
+				border: none
+				outline: none
+				background-color: $gray-btn
+				border-radius: 4px
+				min-width: 200px
+				font-size: 12px
+				padding: 11px 0 9px 10px
+				+font-family($helvetica-reg)
+				+r(960)
+					min-width: 100%
+				+r(568)
+					min-width: 80%
+				&:focus
+					+placeholder($gray-text)
+			.btn-subscribe
+				float: right
+				+r(960)
+					margin-top: 10px
+				+r(768)
+					float: none
+					margin: 10px auto 0
+
+	&__bottom
+		padding: 21px 0
+		border-top: 1px solid #90c4b9
+		background-color: $main-color
+		+r(568)
+			text-align: center
+			padding: 15px 0
+		p
+			float: right
+			margin-top: 36px
+			color: $white
+			+r(568)
+				float: none
+				margin-top: 10px
+	.logo
+		display: inline-block
+		font-size: 0
+		+r(568)
+			width: 100%
+	.contact-list
+		li
+			margin-bottom: 10px
+			i
+				float: left
+				font-size: 14px
+				text-align: center
+				width: 14px
+				+r(768)
+					float: none
+					margin: 0 auto
+					display: block
+			p, a
+				display: inline-block
+				margin-left: 10px
+				+font-family($helvetica-reg)
